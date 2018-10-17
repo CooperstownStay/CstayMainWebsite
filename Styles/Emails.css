@@ -1,0 +1,40 @@
+﻿   Body 
+    {
+      background-color: #eeeebb;
+    }
+            .EmailMainTable
+{
+  width: 700px;
+  border: 1px solid #000000;
+}
+            .EmailContentTable
+{
+  padding: 5px;
+      font-size: 12px;
+      font-family: Arial;
+}
+            .ImageNoMargin
+            {
+              border-width: 0px; 
+              border-style: solid;
+            }
+            .EmailSectionTitle
+            {
+            font-size:14px;
+            font-weight:bold;
+            color: #990000;
+            margin-top: 20px;
+            margin-bottom:5px;
+            }
+            .EmailSectionTitleLarge 
+            {
+            font-size:20px;
+            }
+            .EmailEmphasisBox
+            {
+            border: 1px solid #990000;
+            margin-top: 15px;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            padding: 15px;
+            }

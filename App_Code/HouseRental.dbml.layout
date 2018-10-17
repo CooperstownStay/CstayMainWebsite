@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 24.25, 32.5" name="HouseRental">
+  <DataContextMoniker Name="/HouseRentalDataContext" />
+  <nestedChildShapes>
+    <classShape Id="e6fa54df-ab81-48dc-8a98-b83084474254" absoluteBounds="0.75, 0.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/HouseRentalDataContext/WebErrorLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3f709541-7279-4972-a711-70e7ed270007" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b0bc7e10-e80d-4679-8c63-1826c90a65e4" absoluteBounds="3.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HouseRentalDataContext/PropertyCategoryURL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ba511ff-4867-44f8-8e34-ded5b165dac0" absoluteBounds="3.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b458684b-1e6f-44bd-a785-ac8126e36378" absoluteBounds="3, 3.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HouseRentalDataContext/PropertiesGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="710dab46-1223-4f96-a699-57facd5860fe" absoluteBounds="3.015, 4.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b8e913a9-bd71-41cf-9eb0-e4c9e29ce5c4" absoluteBounds="6.75, 0.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/HouseRentalDataContext/PropertyCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="96d28e25-1b03-49d1-8b07-bd31992dde34" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8ee969e6-df9d-4456-b98a-2cd7f47dbce8" absoluteBounds="0.75, 6.75, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/HouseRentalDataContext/vwPropertyImage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3527b32c-0b53-4299-821c-76fbdd08cbb3" absoluteBounds="0.765, 7.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ac7b16ab-d0a9-4fee-a995-bf1b2a6dd5f6" absoluteBounds="6.75, 3.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/HouseRentalDataContext/vwPropertyMasterImage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bc491f44-529e-42ba-95b9-65129793ae0a" absoluteBounds="6.765, 4.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f1805a38-086b-4902-83c7-5293b25ef5f4" absoluteBounds="3.75, 7.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/HouseRentalDataContext/vwPropertyGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="48e854b0-caa3-4b3d-8878-a7cf4bab22e8" absoluteBounds="3.765, 8.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d60828ab-42df-4389-a062-fef634420a97" absoluteBounds="6.75, 7.75, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/HouseRentalDataContext/PropertyImage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="232b5b3d-a252-4fe6-b8af-5360829b75fe" absoluteBounds="6.765, 8.21, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ed9d983a-deb5-404e-a85e-e31d1abb2374" absoluteBounds="9.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/HouseRentalDataContext/PropertyVideo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eccbe29a-5f5a-41c8-9599-6d92d6ca02c0" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7ae5aabb-ec36-4f15-a7c0-874fd13852b5" absoluteBounds="0.75, 11.75, 2, 17.347312825520831">
+      <DataClassMoniker Name="/HouseRentalDataContext/vwPropertiesWithGroupWaterfront" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4b362776-ca13-4914-a1b7-9071773fa2ca" absoluteBounds="0.765, 12.21, 1.9700000000000002, 16.787312825520832" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5a1d742d-34e9-4204-8baa-ca9651f315af" absoluteBounds="12.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HouseRentalDataContext/vwBookingWeek" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7b7a4130-25fd-4052-8b71-52109f410a76" absoluteBounds="12.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bbd6763b-d4af-4eb5-855a-c13f03af5522" absoluteBounds="12.75, 3.75, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/HouseRentalDataContext/ExitSurvey" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a9c56b2f-c241-4792-99ac-80092f1a126f" absoluteBounds="12.765, 4.21, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9b449062-d101-4a4e-8110-55e41202efac" absoluteBounds="3.75, 12.75, 2, 19.462628580729167">
+      <DataClassMoniker Name="/HouseRentalDataContext/vwGuestSurveyAll" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66418e68-b093-4dd8-af91-b727d80babfa" absoluteBounds="3.765, 13.21, 1.9700000000000002, 18.902628580729164" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="31db0462-6d96-405f-935e-2fa9d6a2b0a1" absoluteBounds="12.75, 8.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/HouseRentalDataContext/qryTaxReport" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be310a07-c74e-470f-8da6-db6a39764348" absoluteBounds="12.765, 9.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="28be5976-a88a-447c-889b-66eaa359f857" absoluteBounds="12.75, 11.75, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/HouseRentalDataContext/WebItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1b604250-eb2e-40b1-bd03-00b28b70619b" absoluteBounds="12.765, 12.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8e4c7e04-1563-4696-974d-7572b7f2739a" absoluteBounds="15.75, 0.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/HouseRentalDataContext/PropertyGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="07709887-429c-40a8-82c0-e458d735f150" absoluteBounds="15.765, 1.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d8e79040-1e15-4f29-a42e-ff641d5dd137" absoluteBounds="15.75, 4.75, 2, 15.231997070312499">
+      <DataClassMoniker Name="/HouseRentalDataContext/Property" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fa20ec75-9b03-4a19-946b-86f2ce05d6aa" absoluteBounds="15.765, 5.21, 1.9700000000000002, 14.6719970703125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f99a0ffc-b1fe-4efa-95dc-45ab41ef3258" absoluteBounds="18.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/HouseRentalDataContext/CodeData" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9f9d48b0-8ef9-48ef-b425-993db2c98c81" absoluteBounds="18.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b990f26f-064e-4f07-a66d-c5d037efb99c" absoluteBounds="18.75, 3.75, 2, 5.0400211588541666">
+      <DataClassMoniker Name="/HouseRentalDataContext/QueuedEmail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="967d598f-13b8-48e0-a082-9483bc1ac9da" absoluteBounds="18.765, 4.21, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="57623bdb-3820-40e9-9873-c6da7e3aabb6" absoluteBounds="21.75, 3, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/HouseRentalDataContext/vwPropertyAvailability" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e54ac018-e282-47bf-bdd9-32039162f229" absoluteBounds="21.765, 3.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b732961b-2bc4-4fe1-92a4-e5ff97407693" absoluteBounds="22, 1.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HouseRentalDataContext/vwBookingWeeksAll" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f83520c3-2860-44c3-889c-bf96c5d939a3" absoluteBounds="22.015, 1.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c7a56f9b-d766-4c94-808e-e1b57364d938" absoluteBounds="10, 7.375, 2, 17.539614257812502">
+      <DataClassMoniker Name="/HouseRentalDataContext/vwPropertiesWithGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c776bf63-71e0-40ee-82f2-71ad9d24869b" absoluteBounds="10.015, 7.835, 1.9700000000000002, 16.9796142578125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

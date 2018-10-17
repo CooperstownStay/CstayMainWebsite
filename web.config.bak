@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Note: As an alternative to hand editing this file you can use the 
+    web admin tool to configure settings for your application. Use
+    the Website->Asp.Net Configuration option in Visual Studio.
+    A full list of settings and comments can be found in 
+    machine.config.comments usually located in 
+    \Windows\Microsoft.Net\Framework\v2.x\Config 
+-->
+<configuration>
+  <configSections>
+    <!-- 4/11/18 - SAM - Added rewriter -->
+    <section name="rewriter" requirePermission="false" type="Intelligencia.UrlRewriter.Configuration.RewriterConfigurationSectionHandler, Intelligencia.UrlRewriter" />
+  </configSections>
+  <appSettings>
+
+    <add key="WebsiteOffline" value="False" />
+    <add key="WebsiteOfflinePage" value="Unavailable.htm" />
+    <add key="QueueEmail" value="False" />
+
+    <add key="DateForTesting" value=""/>
+    <add key="SeasonEndDate" value="9/3/2019 12:00 AM"/>
+    <add key="SeasonStartDate" value="10/1/2019 12:00 AM"/>
+    <add key="EncryptPassword" value="freed0m"/>
+
+    <add key="SMTPServer" value="email-smtp.us-east-1.amazonaws.com" />
+    <add key="SMTPServerUser" value="AKIAJLWNPT6DCBYYV6EQ" />
+    <add key="SMTPServerPassword" value="AkySTdy5qrUaOxBT+2FbrNgBGVAU848PcPZ1GzU9jSFv" />
+    <add key="SMTPServerPort" value="587" />
+    <add key="Google_gaqLink" value="_gaq.push(['_link', 'http:\/\/www.cstayreserve.com\/Reserve.aspx?FromBookmark=True']);" />
+    
+
+    
+    <!-- Deployment: local -->
+    <add key="MainWebsite" value="http://www.cooperstownstay.local" />
+    <add key="ReservationWebsite" value="http://www.cstayreserve.local" />
+    <add key="EditWebsiteLink" value="http://edit.cooperstownstay.local/EditContent.aspx" />
+
+
+    <add key="ErrorEmailAddress" value="brichard@trinitysoftware.net" />
+    <add key="ErrorRedirectPage" value="WebError.aspx" />
+    <add key="EncryptPassword" value="freed0m" />
+    <add key="PageRoutePrefix" value="Rental-Lodging/" />
+    <add key="VillageMapProperties" value=":68:282:283:284:285:286:287:288:289:338:340:517:652:653:736:737:738:739:740:742:743:744:777:779:780:781:782:800:812:847:852:883:885:886:887:888:889:890:891:892:918:931:941:942:943:1015:" />
+    <add key="CommonPageKeywords" value="Cooperstown, Cooperstown NY, Cooperstown rental homes, Cooperstown lodging, Cooperstown vacation rentals, Cooperstown accommodations, Cooperstown Dreams Park, Dreamspark, Cooperstown Baseball World, Oneonta, Baseball Hall of Fame, Cooperstown rentals, stay, Cooperstown apartments, Cooperstown waterfront, Cooperstown lakeside cottages, Otsego County Chamber of Commerce, Cooperstown Chamber, Lonetta, Lonetta Swartout" />
+    <add key="MaxSearchResults" value="400" />
+  </appSettings>
+  <connectionStrings>
+	<add name="HouseRentalConnectionString" connectionString="Data Source=cstaydb.cooperstownstay.com,51433;Initial Catalog=HouseRental;Persist Security Info=True;User ID=sa;Password=4Gsltw316" providerName="System.Data.SqlClient" />
+	<add name="HouseRentalConnectionStringDev" connectionString="Data Source=localhost\sql2012;Initial Catalog=HouseRental;Persist Security Info=True;User ID=sa;Password=4Gsltw316" providerName="System.Data.SqlClient" />
+  </connectionStrings>
+  <system.web>
+    <!-- 
+      Set compilation debug="true" to insert debugging 
+      symbols into the compiled page. Because this 
+      affects performance, set this value to true only 
+      during development.
+    -->
+	
+    <!-- Deployment: live>
+    <compilation debug="false" strict="false" explicit="true" targetFramework="4.0">
+    -->
+    <!-- Deployment: local-->
+    <compilation debug="true" strict="false" explicit="true" targetFramework="4.0">
+      <assemblies>
+        <add assembly="System.Data.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+      </assemblies>
+    </compilation>
+    <pages controlRenderingCompatibilityVersion="3.5" clientIDMode="AutoID">
+      <namespaces>
+        <clear />
+        <add namespace="System" />
+        <add namespace="System.Collections" />
+        <add namespace="System.Collections.Generic" />
+        <add namespace="System.Collections.Specialized" />
+        <add namespace="System.Configuration" />
+        <add namespace="System.Text" />
+        <add namespace="System.Text.RegularExpressions" />
+        <add namespace="System.Linq" />
+        <add namespace="System.Xml.Linq" />
+        <add namespace="System.Web" />
+        <add namespace="System.Web.Caching" />
+        <add namespace="System.Web.SessionState" />
+        <add namespace="System.Web.Security" />
+        <add namespace="System.Web.Profile" />
+        <add namespace="System.Web.UI" />
+        <add namespace="System.Web.UI.WebControls" />
+        <add namespace="System.Web.UI.WebControls.WebParts" />
+        <add namespace="System.Web.UI.HtmlControls" />
+      </namespaces>
+      <controls>
+        <add tagPrefix="telerik" namespace="Telerik.Web.UI" assembly="Telerik.Web.UI" />
+      </controls>
+    </pages>
+    <!--
+      The <customErrors> section enables configuration 
+      of what to do if/when an unhandled error occurs 
+      during the execution of a request. Specifically, 
+      it enables developers to configure html error pages 
+      to be displayed in place of a error stack trace.
+    -->
+
+      <customErrors mode="Off" defaultRedirect="Weberror.aspx">
+      <error statusCode="403" redirect="NoAccess.htm" />
+      <error statusCode="404" redirect="FileNotFound.htm" />
+    </customErrors>
+    <httpHandlers>
+      <add path="Telerik.Web.UI.WebResource.axd" type="Telerik.Web.UI.WebResource" verb="*" validate="false" />
+      <add path="Telerik.Web.UI.DialogHandler.aspx" type="Telerik.Web.UI.DialogHandler" verb="*" validate="false" />
+      <add path="Telerik.RadUploadProgressHandler.ashx" type="Telerik.Web.UI.RadUploadProgressHandler" verb="*" validate="false" />
+      <add path="ChartImage.axd" type="Telerik.Web.UI.ChartHttpHandler" verb="*" validate="false" />
+      <add path="Telerik.Web.UI.SpellCheckHandler.axd" type="Telerik.Web.UI.SpellCheckHandler" verb="*" validate="false" />
+    </httpHandlers>
+    <httpModules>
+      <add name="RadUploadModule" type="Telerik.Web.UI.RadUploadHttpModule" />
+      <add name="RadCompression" type="Telerik.Web.UI.RadCompression" />
+    </httpModules>
+    <!-- 
+    -->
+    <httpRuntime requestValidationMode="2.0" />
+    <sessionState timeout="60" />
+  </system.web>
+  <!-- 
+        The system.webServer section is required for running ASP.NET AJAX under Internet
+        Information Services 7.0.  It is not necessary for previous version of IIS.
+    -->
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false" />
+    <modules runAllManagedModulesForAllRequests="true">
+      <remove name="RadUploadModule" />
+      <remove name="RadCompression" />
+      <add name="RadUploadModule" type="Telerik.Web.UI.RadUploadHttpModule" preCondition="integratedMode" />
+      <add name="RadCompression" type="Telerik.Web.UI.RadCompression" preCondition="integratedMode" />
+      <!-- 4/11/18 - SAM - Added urlrewriter -->
+      <add name="UrlRewriter" type="Intelligencia.UrlRewriter.RewriterHttpModule"/>
+    </modules>
+    <handlers>
+      <remove name="ChartImage_axd" />
+      <remove name="Telerik_Web_UI_SpellCheckHandler_axd" />
+      <remove name="Telerik_Web_UI_DialogHandler_aspx" />
+      <remove name="Telerik_RadUploadProgressHandler_ashx" />
+      <remove name="Telerik_Web_UI_WebResource_axd" />
+      <add name="Telerik_Web_UI_WebResource_axd" path="Telerik.Web.UI.WebResource.axd" type="Telerik.Web.UI.WebResource" verb="*" preCondition="integratedMode" />
+      <add name="Telerik_Web_UI_DialogHandler_aspx" path="Telerik.Web.UI.DialogHandler.aspx" type="Telerik.Web.UI.DialogHandler" verb="*" preCondition="integratedMode" />
+      <add name="Telerik_RadUploadProgressHandler_ashx" path="Telerik.RadUploadProgressHandler.ashx" type="Telerik.Web.UI.RadUploadProgressHandler" verb="*" preCondition="integratedMode" />
+      <add name="ChartImage_axd" path="ChartImage.axd" type="Telerik.Web.UI.ChartHttpHandler" verb="*" preCondition="integratedMode" />
+      <add name="Telerik_Web_UI_SpellCheckHandler_axd" path="Telerik.Web.UI.SpellCheckHandler.axd" type="Telerik.Web.UI.SpellCheckHandler" verb="*" preCondition="integratedMode" />
+    </handlers>
+    <defaultDocument>
+      <files>
+        <clear />
+        <add value="default.aspx" />
+      </files>
+    </defaultDocument>
+    <!-- Deployment: live>
+    <httpRedirect enabled="false" destination="http://www.cooperstownstay.com" exactDestination="false" />
+    -->
+    <!-- Deployment: local -->
+    <!-- commented this out when started using REWRITE tag below
+    <httpRedirect enabled="false" destination="http://devs.cooperstownstay.com" exactDestination="false" />
+     -->
+    
+    <!-- force https -->
+    <!-- REF: https://docs.microsoft.com/en-us/iis/extensions/url-rewrite-module/using-the-url-rewrite-module -->
+    <!-- uncomment on live server on both Main and MainDev.....................  WHEN YOU UNCOMMENT THIS, ALSO CHANGE NON-WWW to WWW to resolve to the https -->
+    <!--<rewrite>
+      <rules>
+        <clear />
+        <rule name="Redirect to https" stopProcessing="true">
+          <match url=".*" />
+          <conditions>
+            <add input="{HTTPS}" pattern="off" ignoreCase="true" />
+          </conditions>
+          <action type="Redirect" url="https://{HTTP_HOST}{REQUEST_URI}" redirectType="Permanent" appendQueryString="false" />
+        </rule>
+      </rules>
+    </rewrite>-->
+    
+    
+  </system.webServer>
+
+
+  <rewriter>
+    <!--  Rewriter Reference: https://www.nuget.org/packages/Intelligencia.UrlRewriter/ -->
+
+
+    <!-- redirect non-www to www -->
+    <if header="host" match="^cooperstownstay.com$">
+      <redirect url="^(.+)$" to="https://dev.cooperstownstay.com$1" />
+    </if>
+
+    <!-- get rid of trailing slash -->
+    <if url="/$">
+      <redirect url="(.+)/$" to="$1" processing="stop" />
+    </if>
+
+    <!-- **************************************** 301 Redirect Old URLs to New User Friendly URLs **************************************** -->
+	
+    <!-- general -->
+    <redirect url="^/default.aspx(.+)?$" to="/$1" processing="stop"/>
+    <redirect url="^/Weekly-House-Rentals.aspx$" to="/house-rentals" processing="stop" />
+    <redirect url="^/Hotels.aspx$" to="/hotels" processing="stop" />
+    <redirect url="^/FAQ.aspx$" to="/faq" processing="stop" />
+    <redirect url="^/contactus.aspx(.+)?$" to="/contact$1" processing="stop" />
+	<redirect url="^/Info.aspx(.+)?$" to="/rental-info$1" processing="stop" />
+	<redirect url="^/Privacy.aspx(.+)?$" to="/privacy$1" processing="stop" />
+	<redirect url="^/Login.aspx(.+)?$" to="/login$1" processing="stop" />
+	<redirect url="^/Details.aspx$" to="/" processing="stop" />
+    
+	<!-- area info -->
+    <redirect url="^/Links.aspx$" to="/things-to-do" processing="stop" />
+    <redirect url="^/Photos.aspx$" to="/cooperstown-photos" processing="stop" />
+    <redirect url="^/Maps.aspx$" to="/cooperstown-ny-map" processing="stop" />
+    <redirect url="^/AreaMap.aspx(.+)?$" to="/area-map$1" processing="stop" />
+    <redirect url="^/GoogleMap.aspx(.+)?$" to="/rental-map$1" processing="stop" />
+    <redirect url="^/VillageMap.aspx(.+)?$" to="/village-map$1" processing="stop" />
+    <redirect url="^/ParksMap.aspx(.+)?$" to="/parks-map$1" processing="stop" />
+	
+	<!-- 1 - 6+ bedroom homes -->
+	<redirect url="^/Properties.aspx\?PropCat=6$" to="/house-rentals/1-2-bedrooms" processing="stop"/>
+    <redirect url="^/Properties.aspx\?PropCat=7$" to="/house-rentals/3-bedrooms" processing="stop"/>
+    <redirect url="^/Properties.aspx\?PropCat=8$" to="/house-rentals/4-bedrooms" processing="stop"/>
+    <redirect url="^/Properties.aspx\?PropCat=9$" to="/house-rentals/5-bedrooms" processing="stop"/>
+    <redirect url="^/Properties.aspx\?PropCat=11$" to="/house-rentals/6-bedrooms" processing="stop"/>
+	
+	<!-- other property categories -->
+    <redirect url="^/Properties.aspx\?PropCat=3,4,13$" to="/house-rentals-on-lake" processing="stop"/>
+    <redirect url="^/Properties.aspx\?PropCat=5$" to="/rooms-suites" processing="stop"/>
+    <redirect url="^/Properties.aspx\?PropCat=15$" to="/group-lodging" processing="stop"/>
+    <redirect url="^/Properties.aspx\?PropCat=10$" to="/oneonta-ny-lodging" processing="stop"/>
+    <redirect url="^/Properties.aspx\?PropCat=1$" to="/apartment-rentals" processing="stop" /><!-- this must appear after other links that start with PropCat=1 -->
+    
+	<!-- property and homepage search results -->
+    <redirect url="^/Properties.aspx\?Search(.+)?$" to="/search-lodging?Search$1" processing="stop" /><!-- this must appear after other links that start with PropCat=1 -->
+	
+    
+    
+    <!-- redirect requests for old rental property URLs -->
+
+
+    <redirect url="^/Rental-Lodging/(.+)?" to="/lodging-rentals/$1" processing="stop"/>
+    
+    <redirect url="^/Oneonta-Rental-Home/(.+)?" to="/oneonta-ny-lodging/$1" processing="stop"/>
+    <redirect url="^/Oneonta-Rental-House/(.+)?" to="/oneonta-ny-lodging/$1" processing="stop"/>
+    <redirect url="^/Oneonta-Rental-Lodging/(.+)?" to="/oneonta-ny-lodging/$1" processing="stop"/>
+    
+    <redirect url="^/Cooperstown-Rental-Suite/(.+)?" to="/rooms-suites/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Rental-Apartment/(.+)?" to="/apartment-rentals/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Dreams-Park-Rental-Suite/(.+)?" to="/rooms-suites/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Dreams-Park-Rental-Apartment/(.+)?" to="/apartment-rentals/$1" processing="stop"/>
+    
+    <redirect url="^/Cooperstown-Waterfront-Rental-Home/(.+)?" to="/house-rentals-on-lake/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Lakefront-Rental-Home/(.+)?" to="/house-rentals-on-lake/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Lake-Rental-Home/(.+)?" to="/house-rentals-on-lake/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Riverfront-Rental-Home/(.+)?" to="/house-rentals-on-river/$1" processing="stop"/>
+    
+    <redirect url="^/Cooperstown-Dreams-Park-Waterfront-Rental-Home/(.+)?" to="/house-rentals-on-lake/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Dreams-Park-Lakefront-Rental-Home/(.+)?" to="/house-rentals-on-lake/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Dreams-Park-Lake-Rental-Home/(.+)?" to="/house-rentals-on-lake/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Dreams-Park-Riverfront-Rental-Home/(.+)?" to="/house-rentals-on-river/$1" processing="stop"/>
+    
+    <redirect url="^/Cooperstown-Waterfront-Rental-House/(.+)?" to="/house-rentals-on-lake/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Lakefront-Rental-House/(.+)?" to="/house-rentals-on-lake/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Lake-Rental-House/(.+)?" to="/house-rentals-on-lake/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Riverfront-Rental-House/(.+)?" to="/house-rentals-on-river/$1" processing="stop"/>
+    
+    <redirect url="^/Cooperstown-Dreams-Park-Waterfront-Rental-House/(.+)?" to="/house-rentals-on-lake/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Dreams-Park-Lakefront-Rental-House/(.+)?" to="/house-rentals-on-lake/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Dreams-Park-Lake-Rental-House/(.+)?" to="/house-rentals-on-lake/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Dreams-Park-Riverfront-Rental-House/(.+)?" to="/house-rentals-on-river/$1" processing="stop"/>
+    
+    <redirect url="^/Cooperstown-Waterfront-Rental-Lodging/(.+)?" to="/house-rentals-on-lake/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Lakefront-Rental-Lodging/(.+)?" to="/house-rentals-on-lake/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Lake-Rental-Lodging/(.+)?" to="/house-rentals-on-lake/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Riverfront-Rental-Lodging/(.+)?" to="/house-rentals-on-river/$1" processing="stop"/>
+    
+    <redirect url="^/Cooperstown-Dreams-Park-Waterfront-Rental-Lodging/(.+)?" to="/house-rentals-on-lake/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Dreams-Park-Lakefront-Rental-Lodging/(.+)?" to="/house-rentals-on-lake/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Dreams-Park-Lake-Rental-Lodging/(.+)?" to="/house-rentals-on-lake/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Dreams-Park-Riverfront-Rental-Lodging/(.+)?" to="/house-rentals-on-river/$1" processing="stop"/>
+    
+    <redirect url="^/Cooperstown-Rental-Home/(.+)?" to="/house-rentals/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Rental-House/(.+)?" to="/house-rentals/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Rental-Lodging/(.+)?" to="/house-rentals/$1" processing="stop"/>
+    
+    <redirect url="^/Cooperstown-Dreams-Park-Rental-Home/(.+)?" to="/house-rentals/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Dreams-Park-Rental-House/(.+)?" to="/house-rentals/$1" processing="stop"/>
+    <redirect url="^/Cooperstown-Dreams-Park-Rental-Lodging/(.+)?" to="/house-rentals/$1" processing="stop"/>
+
+
+
+
+
+
+
+    <!-- **************************************** Friendly URL Rewrites **************************************** -->
+	
+	<!-- general -->
+    <rewrite url="^/rental-info([?].+)?$" to="~/Info.aspx$1" processing="stop"/>
+    <rewrite url="^/faq([?].+)?$" to="~/FAQ.aspx$1" processing="stop"/>
+    <rewrite url="^/contact([?].+)?$" to="~/ContactUs.aspx$1" processing="stop"/>
+    <rewrite url="^/privacy([?].+)?$" to="~/Privacy.aspx$1" processing="stop"/>
+    <rewrite url="^/login([?].+)?$" to="~/Login.aspx$1" processing="stop"/>
+	
+	<!-- area info -->
+	<rewrite url="^/things-to-do([?].+)?$" to="~/Links.aspx$1" processing="stop"/>
+	<rewrite url="^/cooperstown-photos([?].+)?$" to="~/Photos.aspx$1" processing="stop"/>
+	<rewrite url="^/cooperstown-ny-map([?].+)?$" to="~/Maps.aspx$1" processing="stop"/>
+	<rewrite url="^/area-map([?].+)?$" to="~/AreaMap.aspx$1" processing="stop"/>
+	<rewrite url="^/rental-map([?].+)?$" to="~/GoogleMap.aspx$1" processing="stop"/>
+	<rewrite url="^/village-map([?].+)?$" to="~/VillageMap.aspx$1" processing="stop"/>
+	<rewrite url="^/parks-map([?].+)?$" to="~/ParksMap.aspx$1" processing="stop"/>
+	
+	<!-- house rentals -->
+    <rewrite url="^/house-rentals/1-2-bedrooms([?].+)?$" to="~/Properties.aspx?PropCat=6&amp;$1" processing="stop"/>
+    <rewrite url="^/house-rentals/3-bedrooms([?].+)?$" to="~/Properties.aspx?PropCat=7&amp;$1" processing="stop"/>
+    <rewrite url="^/house-rentals/4-bedrooms([?].+)?$" to="~/Properties.aspx?PropCat=8&amp;$1" processing="stop"/>
+    <rewrite url="^/house-rentals/5-bedrooms([?].+)?$" to="~/Properties.aspx?PropCat=9&amp;$1" processing="stop"/>
+    <rewrite url="^/house-rentals/6-bedrooms([?].+)?$" to="~/Properties.aspx?PropCat=11&amp;$1" processing="stop"/>
+	
+	<!-- categories -->
+    <rewrite url="^/house-rentals-on-lake([?].+)?$" to="~/Properties.aspx?PropCat=3,4,13&amp;$1" processing="stop"/>
+    <rewrite url="^/rooms-suites([?].+)?$" to="~/Properties.aspx?PropCat=5" processing="stop"/>
+    <rewrite url="^/group-lodging([?].+)?$" to="~/Properties.aspx?PropCat=15" processing="stop"/>
+    <rewrite url="^/oneonta-ny-lodging([?].+)?$" to="~/Properties.aspx?PropCat=5" processing="stop"/>
+    <rewrite url="^/apartment-rentals([?].+)?$" to="~/Properties.aspx?PropCat=1" processing="stop"/>
+	
+    <rewrite url="^/house-rentals([?].+)?$" to="~/Weekly-House-Rentals.aspx$1" processing="stop"/> <!-- must appear after all other /house-rentals* -->
+    
+	<!-- property and homepage search results -->
+    <rewrite url="^/search-lodging[?](.+)?$" to="~/Properties.aspx?$1" processing="stop"/>
+  </rewriter>
+  
+</configuration>

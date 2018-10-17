@@ -1,0 +1,138 @@
+﻿
+            H1.PropertyTitle
+{
+  font-size: 20px;
+  color: #F5F4EB;
+  font-weight: bold;
+  margin:5px;
+}
+H2.PropertyTitle
+{
+  font-size: 16px;
+  color: #F5F4EB;
+  font-weight: bold;
+  margin:1px;
+}
+H2.ParksTitle
+{
+  font-size: 20px;
+  color: #F5F4EB;
+  font-weight: bold;
+  margin:1px;
+}
+H3.CStayTitle
+{
+  font-size: 16px;
+  color: #F5F4EB;
+  font-weight: bold;
+  margin:1px;
+}
+H3.ImageSectionTitle
+{
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    margin: 1px;
+    margin: 10px 0px;
+    background-color: #082140;
+    padding: 10px;
+}
+A
+{
+  color: #304782;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+A:visited {color:#304782;}  /* visited link */
+A:hover {color:#58A9C0;}  /* mouse over link */
+  
+a.LinkMasterList {
+    background: #f2f2f2;
+    display: block;
+    font-size: 12px;
+    padding:10px;
+}
+a.LinkMasterList:hover {
+    background-color: #ddd;
+    text-decoration: none;
+}
+
+  
+A.LinkSmallBlue
+{
+ font-size:12px;
+  }
+
+A.LinkSmall#F5F4EB
+{
+  color:#F5F4EB;
+ font-size:12px;
+  }
+
+A.LinkLarge#F5F4EB
+{
+  color:#F5F4EB;
+ font-size:16px;
+  }
+
+A.LinkMedBlue
+{
+ font-size:14px;
+  }
+
+A.LinkMedBlue:visited {color:#304782;}
+A.LinkMedBlue:hover {color:#1E5B93;}
+
+A.PlainText 
+{
+  text-decoration:none;
+  color:#F5F4EB;
+}
+
+A.PlainText:hover
+{
+  text-decoration:none;
+  color:#F5F4EB;
+}
+A.PlainText:visited
+{
+  text-decoration:none;
+  color:#F5F4EB;
+}
+
+
+.MedText
+{
+  font-size:12px;
+}
+
+
+.SmallBold
+{
+  font-size: 10px;
+  color: #F5F4EB;
+  font-weight: bold;
+  margin: 1px;
+}
+.SmallWhiteItalics 
+{
+ font-size:11px;
+ color: #F5F4EB;
+ font-style:italic;
+ margin-bottom:5px;
+}
+
+    
+.DividerBlueThin
+{
+  border-top: 1px solid #317082;
+  width: 100%;
+  height: 1px;
+  margin-top: 3px;
+  margin-bottom: 2px;
+  border-color: #317082;
+}
+
+hr DividerBlueThin
+{
+}

@@ -1,0 +1,150 @@
+﻿
+.AreaMap
+{
+  overflow:hidden;
+        width: 900px; 
+        height: 700px; 
+}
+.VillageMap
+{
+  overflow:hidden;
+        width: 900px; 
+        height: 700px; 
+  
+}
+.MapWrap
+{
+  position:relative;
+  
+}
+
+a.AreaMap:link {color:#FFFFFF;}      /* unvisited link */
+a.AreaMap:visited {color:#FFFFFF;}  /* visited link */
+a.AreaMap:hover { border-color:Gray; }  /* mouse over link */
+
+
+
+
+.map-key {
+    position: absolute;
+    top: 94px;
+    right: 160px;
+    background: url(/images/cstay-accomm-map-key.jpg) no-repeat;
+    height: 78px;
+    width: 100px;
+}
+
+
+.map-control {
+    position: absolute;
+    top: 10px;
+    right: 160px;
+    background: url(/jquery/images/map-control-full.png) no-repeat;
+    height: 85px;
+    width: 100px;
+}
+
+.map-control a {
+    height: 18px;
+    width: 18px;
+    display: block;
+    text-indent: -999em;
+    position: absolute;
+    outline: none;
+}
+
+.map-control a:hover {
+    background: #535353;
+    opacity: .4;
+    filter: alpha(opacity=40);
+}
+
+.map-control a.left {
+    left: 39px;
+    top: 22px;
+}
+
+.map-control a.right {
+    left: 79px;
+    top: 22px;
+}
+
+.map-control a.up {
+    left: 59px;
+    top: 2px;
+}
+
+.map-control a.down {
+    left: 59px;
+    top: 42px;
+}
+
+.map-control a.zoom {
+    left: 2px;
+    top: 8px;
+    height: 21px;
+    width: 21px;
+}
+
+.map-control a.back {
+    left: 2px;
+    top: 31px;
+    height: 21px;
+    width: 21px;
+}
+.map-control a.print {
+    left: 2px;
+    top: 65px;
+    height: 15px;
+    width: 30px;
+}
+.map-control a.printMap 
+{
+  height:1px;
+  width:1px;
+}
+.map-control a.reset {
+    left: 32px;
+    top: 65px;
+    height: 15px;
+    width: 33px;
+}
+.map-control a.close {
+    left: 65px;
+    top: 65px;
+    height: 15px;
+    width: 33px;
+}
+.map-control a.closeMap 
+{
+  height:1px;
+  width:1px;
+}
+
+
+
+.MapPeg
+{
+ position:absolute;
+     background: url(/images/MapPeg.png) no-repeat;
+    height: 34px;
+    width: 20px;
+    overflow:hidden;
+}
+
+.contentBox>.row {margin-left: 0px;margin-right: 0px;}
+	  
+@media (max-width:767px) 
+{
+    img[usemap] {
+		border: none;
+		height: auto;
+		max-width: 100%;
+		width: auto;
+	}
+	.AreaMap {width:100%;height:auto;}
+	.VillageMap {width:100%;height:auto;}
+    .map-control,.map-key {display:none;}
+          
+	.container>.row {margin-left: 0px;margin-right: 0px;}
+}

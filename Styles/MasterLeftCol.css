@@ -1,0 +1,111 @@
+﻿
+.titlebox {
+    background-color: #082140;
+    margin: 0px 15px;
+    padding: 30px;
+}
+    
+.titlebox h1, .titlebox h2
+{
+     color:White;
+}
+
+.topYellowBar {
+    background: #FFE488; /*#ffd22c*/
+    text-align: center;
+    padding: 15px 0;
+    margin: 0px 15px;
+}
+
+.menubox {
+    padding: 15px;
+    color: white;
+    font-size: 17px;
+}
+
+.titlebox .lead {
+    font-family: 'Muli', sans-serif;
+    color: #aeb9dd;
+}
+.content-column .lead 
+{
+    font-size:15px;
+}
+
+.two-col-fluid {
+    position: relative;
+    background-color: #f6f6f6;
+    margin: 0px 15px 0px -15px; /* this compensates for the container/row stuff */
+}
+
+.two-col-fluid .image-column {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+}
+.two-col-fluid .content-column {
+    position: relative;
+    float: right;
+    width: 50%;
+}
+
+.content-inner {
+    padding: 30px;
+}
+
+.callout, .callout-light, .callout-medium, .callout-dark, .callout-bright
+{
+    padding: 50px;
+    text-align: center;
+    margin: 0px 15px 0px -15px;
+    background-color:#fff;
+}
+.callout-light {
+    background-color:#f2f2f2;
+    color:#082140;
+}
+.callout-dark {
+    background-color:#082140;
+    color:#fff;
+}
+.callout-medium {
+    background-color:#334377;
+    color:#fff;
+}
+.callout-bright {
+    background-color:#ffd22c;
+    color:#000;
+}
+
+@media (max-width:767px) {
+.titlebox {margin: 0px;}
+.topYellowBar {margin: 0px;}
+}
+
+
+p#headercallouttext {
+    font-size: 18px;
+    text-align: left;
+    padding: 0px 30px;
+}
+p#headercallouttext span {
+    font-weight: bold;
+    display: block;
+}
+
+#headercalloutbtn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 17px;
+    white-space:nowrap;
+}
+
+.contentBox .col-sm-9 {margin: 0px 0px 0px 0px;}/*SEARCHFORFIXTHIS*/

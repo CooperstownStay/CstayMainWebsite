@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /working
+Disallow: /app_code
+Disallow: /aspnet_client
+Disallow: /bin
+Disallow: /controls
+Disallow: /unavailable.htm
+Disallow: /weberror.aspx
+Disallow: /editcontent.aspx
+
+User-agent: SemrushBot-SA
+Disallow:

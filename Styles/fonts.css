@@ -1,0 +1,20 @@
+﻿/* 
+
+Font References:
+https://fonts.google.com/
+https://developers.google.com/fonts/docs/getting_started  
+
+font-family: 'Muli', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'PT Serif', serif;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Cabin', sans-serif;
+
+*/
+
+p 
+{
+font-family: 'Roboto', sans-serif;
+font-size:14px;
+}

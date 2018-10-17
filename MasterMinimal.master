@@ -1,0 +1,192 @@
+<%@ Master Language="VB" CodeFile="MasterMinimal.master.vb" Inherits="MasterMinimal" %>
+
+
+<%@ Register TagName="Menu" TagPrefix="uc" Src="~/Controls/MainMenu.ascx" %>
+<%@ Register TagName="FooterMinimal" TagPrefix="uc" Src="~/Controls/FooterMinimal.ascx" %>
+<%@ Register TagName="Callout" TagPrefix="uc" Src="~/Controls/Callout.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--master-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head id="Head1" runat="server">
+
+  <meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/vnd.microsoft.icon" href="/CStayIcon.ico" />
+  <link type="text/css" rel="Stylesheet" href="/Styles/CStay.css" />
+  <link href="/Styles/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
+  <script src="/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
+  <script src="/jquery/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+
+  <link href="/styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href="/styles/style.css" rel="stylesheet" type="text/css" />
+  <link href="/styles/mainmenu.css" rel="stylesheet" type="text/css" />
+
+  <script type="text/javascript" src="/scripts/bootstrap.js"></script>
+  
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Anton|Cabin:500|Libre+Baskerville:700|Muli|PT+Serif:700|Roboto" rel="stylesheet"/>
+  <link href="/styles/fonts.css" rel="stylesheet" type="text/css" />
+
+  <script src="/jquery/position-calculator.min.js" type="text/javascript"></script>
+  
+    <script type="text/javascript" language="JavaScript" src="/scripts/common.js"></script>
+    <!--script type="text/javascript" language="JavaScript" src="/scripts/routines.js"></script><script type="text/javascript" language="JavaScript" src="/scripts/availability.js"></script-->
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            //show/hide dropdown on hover.
+            $(".dropdown").hover(
+                function () { if ($(window).width() > 750) { $('.dropdown-menu', this).stop().fadeIn("fast"); } },
+                function () { if ($(window).width() > 750) { $('.dropdown-menu', this).stop().fadeOut("fast"); } }
+            );
+            //fixes sub menu when user goes from wide to mobile.
+            $(window).resize(function () { if ($(window).width() < 750) { $('.dropdown-menu').css('display', ''); } });
+
+        });
+
+
+      function ShowMsgTop(sMsg) {
+        $("#MsgTop").html(sMsg);
+      }
+
+
+    </script>
+    
+  <style type="text/css">
+    
+    .logo {
+        padding: 20px 0px; /* minimal */
+    }
+    .titlebox {
+        margin: 0px 0px 0px 15px;  /* minimal */
+        padding: 10px 20px;  /* minimal */
+    }
+    .titlebox .lead {
+        font-size: 14px; /* minimal */
+    }
+ 
+    .FooterUlMain1 li a {
+        display: inline-block; /* minimal */
+        margin: 10px 20px 10px 20px; /* minimal */
+        padding: 3px 20px; /* minimal */
+        float: left; /* minimal */
+        min-width: 150px; /* minimal */
+    }
+    
+    a#btnCloseWindow {
+        float: right;
+        margin: 10px 10px 0px 0px;
+    }
+    
+    @media (max-width:767px) {
+        .FooterUlMain1 li a {
+            display: block;
+            float: none;
+        }
+        
+        .titlebox {
+            margin-left:0px;
+        }
+    }
+    @media (max-width:450px) {
+    a#btnCloseWindow {
+        margin: -125px 10px 0px 0px;
+    }
+    }
+    
+  </style>
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  
+  </asp:ContentPlaceHolder>
+  <asp:ContentPlaceHolder ID="TopScripts" runat="server">
+  </asp:ContentPlaceHolder>
+    <%=MyUtils.SetGoogleAnalyticsCode(MyUtils.CNullS(Session("CurrentPage4GoogleAnalytics")))%>
+
+</head>
+<body background="/images/cstay-zbkgd-test.jpg">
+  <form id="form1" runat="server">
+    <!-- ATSW BEGIN -------------------------------------------------------------------------------------------------------------->
+
+    <asp:Label ID="lblTestMode" runat="server" BackColor="AntiqueWhite" ForeColor="Red" Visible="false" Text="<div style='text-align:center; font-size:18px; '>  *** NOT Live Website ****** NOT Live Website ****** NOT Live Website ***</div>"></asp:Label>
+
+    <asp:Panel ID="pnlEditMode" runat="server">
+      <div style="text-align: center; vertical-align: middle;">
+        <asp:Button ID="btnLeavEditMode" CssClass="btn btn-success" runat="server" Text="Quit Editing" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="lblEditModeWarning" ForeColor="Red" Font-Size="Large" Font-Bold="true"
+          Font-Names="Arial" runat="server" Text="CURRENTLY  IN  EDIT  MODE"></asp:Label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </asp:Panel>
+
+    <asp:Panel ID="pnlTopSection" runat="server">
+        <header>
+            <div class="container">
+              <div class="header">
+                <div class="clearfix">
+                  <div class="row">
+                    <div class="col-sm-4 col-xs-12 logo"><a href="/<% =Session("EditModeQS") %>"><img src="/images/logo.jpg" alt="Cooperstown Stay" class="responsive"/></a></div>
+                    <div class="col-sm-8 col-xs-12"><%= GetCloseButton()%>
+                        <div class="titlebox">
+                            <h1 class="h3"><%=Page.Title%></h1>
+                            <p class="lead"><%=Page.MetaDescription%>&nbsp;</p>
+                        </div>
+                    </div>
+                  </div>
+                </div><!--/clearfix-->
+              </div><!--/header-->
+            </div><!--/container-->
+        </header>
+    </asp:Panel>
+    
+    <asp:ContentPlaceHolder ID="phTop" runat="server">
+    <div class="container hidden-print">
+        <div class="row">
+<uc:Callout ID="ucCallout" runat="server" />
+        </div>
+    </div>
+    </asp:ContentPlaceHolder>
+    <div class="container">
+      <div class="contentBox">
+            <!--CPH.MainBodyContent-->
+            <asp:ContentPlaceHolder ID="MainBodyContent" runat="server">
+        <div class="row">
+          <div class="col-sm-12">
+          </div><!--/col-->
+        </div><!--/row-->
+            </asp:ContentPlaceHolder>
+            <!--/CPH.MainBodyContent-->
+      </div><!--/contentBox-->
+    </div><!--/container-->
+    
+    <uc:FooterMinimal ID="ucFooterMinimal" runat="server" />
+
+
+      <%--    <script language="javascript" type="text/javascript">
+        $(function () {
+
+            // setdefaultbutton
+            // suppress form submission when someone presses enter in a text field.  Since we have the search box we need to explicitly tell the action to take when someone presses enter.
+            //$("#aspnetForm").submit(function (e) {e.preventDefault();});
+            $("#txtSearch").keypress(function (e) {
+                // check for enter pressed, supress submit, call function
+                if (e.which == 13) {
+                    e.preventDefault();
+                    DoPropertySearch();
+                }
+            });
+            $("#btnSearch").click(function (e) { e.preventDefault(); DoPropertySearch(); });
+            //END:setdefaultbutton
+            
+        });
+    </script>--%>
+
+    <!-- ATSW END -------------------------------------------------------------------------------------------------------------->
+    <asp:ContentPlaceHolder ID="BottomScripts" runat="server">
+    </asp:ContentPlaceHolder>
+
+  </form>
+</body>
+</html>

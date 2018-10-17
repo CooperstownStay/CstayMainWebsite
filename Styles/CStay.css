@@ -1,0 +1,545 @@
+﻿@import url("/Styles/RadEditor.css");
+
+
+/* New Div table CSS */
+.divTable{
+	display: table;
+	width: 100%;
+	border: .5px solid #EEEEEE;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableCell {
+	border: .5px solid #EEEEEE;
+	display: table-cell;
+	padding: 3px;
+    margin: 0px;
+    text-align:center;
+}
+.divTableBody {
+	display: table-row-group;
+}
+
+.AvailabilityChart
+{
+font-size: 11px;
+color: #F5F4EB;   
+white-space: nowrap;
+}
+.AvailabilityChart A:link {color:#FFD32C; font-weight:100;}  /* link */
+.AvailabilityChart A:hover {color:#F5F4EB;}  /* mouse over link */
+.AvailabilityChart A:visited {color:#FFD32C;}  /* visited link */
+
+.PropOpen{
+background-color: #006600;
+}
+.PropHold{
+background-color: #FFD32C;
+}
+.PropReserved{
+background-color: #999999;
+}
+
+/* BOOK button*/
+.divTableCell.PropOpen a {text-transform: uppercase;padding: 2px;background-color: #ffd22c;color: black;font-weight: bold;}
+.divTableCell.PropOpen a:hover {text-decoration: none;background-color: yellow;}
+
+/* instructions to click the book icon */
+.book-instruction {
+    text-align: center;
+    width: 100%;
+    color: #000;
+    font-size: 11px!important;
+    font-weight: bold;
+}
+
+.book-instruction i {
+    text-transform: uppercase;
+    padding: 5px;
+    background-color: #ffd22c;
+    color: black;
+    display: inline-block;
+    font-size: 13px;
+    margin: 5px 1px;
+}
+
+
+body
+{
+	font-family: Verdana, Arial,Helvetica,Geneva,Swiss,SunSans-Regular;
+/* BJR removed to get right property images to aslign   text-align: left;*/	
+	font-size: 12px;
+}
+table
+{
+  border: 0px;
+}
+
+.MainTable
+{
+  width: 600px;
+  height: 100%;
+}
+
+.MasterDescription
+{
+  font-size: 11px;
+  margin-left: 5px;
+  text-align: left;
+  vertical-align: text-top;
+}
+
+
+.DetailDescription
+{
+	font-size: 12px;
+  margin-left: 5px;
+  text-align: left;
+  vertical-align: text-top;
+}
+.DescriptionApartmentName
+{
+  color:#cc0000;
+  font-weight:bold;
+}
+
+
+.MainTopSection 
+{
+  vertical-align:top;
+  text-align:center;
+}
+
+.TopSectionLogo
+{
+  background-image: url('../images/cstay-logo-head-spacer-lt-green.gif');
+  background-repeat: repeat;
+  width: 750px;
+}
+
+.MainMiddleSection 
+{
+  vertical-align:top;
+  text-align:center;
+  padding: 2px;
+}
+
+.MainLeftSection
+{
+  padding-right: 2px;
+  width: 153;
+}
+.LeftSectionFindProperty
+{
+  background-color: #317082;
+  font-size: 9px;
+  color: #c2c2c2;
+  padding-top: 10px;
+  margin-left: 7px;
+  font-family: Verdana;
+  text-align: center;
+}
+.JQUi-Button
+{
+  font-family: Verdana;
+}
+
+
+.availability
+{
+font-family:Arial;
+font-size: 8px;
+color: #F5F4EB;   
+font-weight:600;
+}
+
+.WebItemNotShown
+{
+	border: thin solid #000000;
+	border-width: 1px;
+  opacity:0.7;
+filter:alpha(opacity=70);
+}
+.WebItemNotShownWarning
+{
+	border: thin solid #000000;
+	border-width: 1px;
+	padding: 10px;
+	font-family: Garamond;
+	font-size: 14px;
+	font-weight: bold;
+	color: #CC0000;
+}
+
+
+
+
+.DetailsAddress
+{
+  margin-top:5px;
+  text-align:center;
+   vertical-align:bottom;
+}
+.TableLightBrown
+{
+ background:#EEEECC;
+}
+.DarkGreenBackground
+{
+ background:#006400;
+  
+}
+
+
+
+
+.FloatLeft { float:left; display:inline-block;}
+.FloatRight { float:right; display:inline-block;}
+.ClearBoth { clear:both;}
+.Bottom { vertical-align:bottom}
+
+
+.ImageRotator 
+{
+margin-left:3px; 
+margin-right:2px;
+}
+
+#preview-hold
+{
+  position: fixed;
+  border: 1px solid #024000;
+  display: none; 
+  color: #F5F4EB;
+}
+
+#PreviewTitle-hold
+{
+  background: #006400;
+ text-align:left;
+  padding: 3px;
+  width:inherit;
+  height:inherit;
+}
+
+#preview
+{
+  position: fixed;
+  border: 1px solid #5A5757;
+  display: none; 
+  color: #000000;
+}
+
+#PreviewTitle
+{
+  background: #FFFFFF;
+  text-align: left;
+  padding: 3px;
+  width: inherit;
+  height: inherit;
+  white-space: pre-wrap;
+}
+
+
+.FacebookLike FloatLeft
+{
+   text-align:center;
+  vertical-align:bottom;
+  margin:2px;
+}
+.TwitterFollow FloatRight
+{
+   text-align:center;
+  vertical-align:bottom;
+  margin:2px;
+}
+
+.AgreementAndPolicies
+{
+  padding:5px;
+}
+.RadMultiPage
+{
+  padding:10px;
+}
+
+.CloseButtons
+{
+ margin:0 0 0 0
+}
+.MapButton
+{
+  font-size:10px !important;
+  margin:2px;
+}
+.DiscountNotice
+{
+  font-size:12px;
+  font-weight:500;
+  color:#cc0000;
+  margin-top:5px;
+  margin-bottom:5px;
+}
+.DiscountNoticeMed 
+{
+  font-size:11px;
+}
+.DiscountNotice A
+{
+  color: #cc0000;
+  font-weight: 600;
+}
+.DiscountNotice A:visited {color:#cc0000;}  /* visited link */
+.DiscountNotice A:hover {color:#FF0000;}  /* mouse over link */
+
+.DiscountNoticeApartments
+{
+  padding:5px;
+  text-align:center
+}
+.PropertyListCell
+{
+/*
+  border-left:2px solid #317082;
+  border-right:2px solid #317082;
+  border-bottom:2px solid #317082;
+  padding-top:2px;
+  padding-left:4px;
+  padding-bottom:3px;
+*/
+  background: #f2f2f2;
+  margin-bottom: 4px;
+}
+
+.PropertyListCell img {
+    width: 30px;
+    margin: 5px;
+    border: 2px solid #fff;
+}
+
+.PropertyCategoryTitle {
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    color: #334377;
+    margin-bottom: 4px;
+    border-left: 10px solid;
+    padding-left: 8px;
+}
+
+.ReviewsMain
+{
+  padding:5px;
+/*  border-bottom:2px solid #317082; */
+  margin-bottom:10px;
+}
+.ReviewsCloseButton
+{
+ text-align:right;
+ width:100%;  
+}
+.ReviewsProperty
+{
+   /*border:1px solid #317082;*/
+   padding:3px;
+}
+.ReviewsPropertyTitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0px;
+    background-color: #334377;
+    padding: 5px 10px;
+}
+
+.ReviewsHeader {
+  font-size: 13px;
+  margin-bottom: 3px;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.ReviewsContent
+{
+  font-size: 11px;
+  margin: 25px 0px;
+  padding: 3px;
+  /*border-top: 1px solid #317082;*/
+}
+
+.ReviewsRecommend
+{
+  font-weight:bold;
+  font-style:italic;
+  font-size:9px;
+  margin-top:5px;
+}
+
+.ReviewsBody p {
+    background-color: #fff;
+    padding: 15px 10px;
+    font-style: italic;
+    color: #555;
+    font-size: 13px;
+    font-family:Verdana;
+}
+
+.ReviewsImage
+{
+  /*margin-top:3px;*/  /* 9/24/18 - SAM - removed because moved ReviewsHeader to the right of this */
+  margin-bottom:3px;
+}
+
+
+.ContactUsLabels{
+
+}
+
+.StandardAmenities{
+  padding:10px;
+}
+
+
+    /*  CALENDAR STYLES **/
+.cal th {
+    padding: 2px!important;
+    margin: 0px;
+    font-size: 10px;
+    text-align: center;
+    font-weight:normal;
+}
+
+.cal td {
+    padding: 2px!important;
+    text-align: center;
+    font-size: 11px;
+    vertical-align:middle!important;
+}
+.cal .table {width:auto!important;margin-bottom: 0px;margin: 0px auto;}
+
+.cal td a .fa {font-size:12px;padding:1px;}/*otherwise, font-size:14px;padding:0px;*/
+
+th.PropOpen {color: #fff;}
+.PropHold {background-color: #669966;/*background-color: #002D00*/}
+.PropHold {color:#fff;}
+.PropReserved {background-color: #ccc;}
+.PropReserved {color:#555;}
+
+.PropHold i.fa {margin: 0px 5px;display: block;}
+.PropReserved i.fa {margin: 0px 5px;display: block;}
+
+.PropOpen a {
+    text-transform: uppercase;
+    padding: 1px;
+    background-color: #ffd22c;
+    color: black;
+    display: block;
+    font-size: 13px;
+    margin: 5px 1px;
+}
+
+.PropOpen a:hover {background-color: yellow;}
+
+.PropOpen i.fa.fa-check {color: #fff;margin: 7px 5px;font-size: 14px;}
+
+.key div {
+    display: inline-block;
+    margin: 0px;
+    font-size: 10px;
+}
+
+.key .PropOpen, .key .PropHold {color: #fff;}
+
+.key [class*="Prop"] {
+    /*width: 20px;*/
+    padding:3px 5px;
+    margin-left:3px;
+}
+
+.key {
+    clear: both!important;
+    padding-bottom: 1px;
+    width: 320px;
+    margin: 10px auto!important;
+    display: block;
+    border: solid 2px #ddd;
+    padding: 5px;
+    background-color: #f2f2f2;
+}
+
+.key.row .col-xs-4 {text-align: center;}
+
+.cal {
+    display: block;
+    clear: both!important;
+    margin-top: 10px;
+}
+
+.cal h5 {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    color: red;
+    font-size: 14px;
+    margin: 0px 0px 5px 0px;
+}
+.cal.row {margin-left: 0px;margin-right: 0px;}
+
+.modal-footer {margin-bottom: 0px!important;text-align:center!important;}
+.close {display: inline-block;}
+
+@media screen and (max-width:991px) 
+{
+  .PropOpen i.fa.fa-check {margin: 1px;}
+}
+@media screen and (max-width: 767px){
+    .contentBox .col-sm-9 .key .row {padding-left: 0px!important;}
+    
+    /*.cal td .fa {padding: 2px!important;}*/ /* 9/18/18 - SAM - this was making the avail calendar too wide on mobile during AfterSeason. */
+    /*.key.row {width: auto;margin-left: 5px!important;margin-right: 25px!important;}*/  /* SAM - 20180404 - removed b/c doing modal popup instead */
+    /*.cal.row {margin-left: -15px;} */
+    .tab-pane .cal.row {margin-left:0px;}
+    
+    .key [class*="Prop"] {padding:3px 3px;}
+    
+    div#mobile-avail {padding: 0px!important;}
+    
+    
+    /* SAM - 20180404 - added b/c doing modal popup */
+    .modal-dialog {margin: 5px -1px!important;}
+    .modal-body {padding: 15px 0px!important;}
+    .modal-content {border-radius: 2px!important;}
+
+    .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {margin-right: 0px!important;margin-left: 0px!important;}
+}
+
+@media screen and (max-width: 350px)
+{
+  .cal .table {margin: 0px 0px;}
+  .cal th {padding: 1px!important;}
+  .cal td {padding: 0px!important;}
+  /*
+  .PropReserved i.fa {margin: 0px 4px;}
+  .key {margin: 10px 0px!important;}
+*/
+}
+
+@media screen and (min-width: 768px){
+  .cal td .fa {padding: 3px!important;}
+  .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {margin-right: -15px!important;margin-left: -15px!important;}
+}
+
+@media screen and (min-width: 1024px){
+    .cal td a .fa {font-size:14px;}
+    .cal td .fa {padding: 1px!important;}
+    .cal th {font-size:13px;}
+    .PropOpen a {padding: 4px;margin: 8px 3px;}
+    .PropReserved i.fa {margin: 7px 9px;font-size: 14px;}
+    .PropHold i.fa {margin: 7px 9px;font-size: 14px;}
+}
+.key .avail {text-align:center;display:block;font-weight:bold;margin-top:3px;}
+
+    /*  END CALENDAR STYLES **/
